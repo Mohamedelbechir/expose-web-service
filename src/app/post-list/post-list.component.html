@@ -1,0 +1,28 @@
+<!-- <a class="btn btn-info mb-2" [routerLink]="[ '/add-post']">ajouter</a> -->
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <div class="form-group">
+        <label for="exampleInputEmail1">contenu</label>
+        <textarea type="text" class="form-control" formControlName="texte" aria-describedby="emailHelp"></textarea>
+    </div>
+    <div class="mb-4">
+        <button type="submit" class="btn btn-primary mr-2" [disabled]="!form.valid">save</button>
+        <button (click)="clear()" type="button" class="btn btn-light">clear</button>
+    </div>
+</form>
+<table class="table table-sm table-striped table-hover">
+    <thead>
+        <th>contenu</th>
+        <th>date de création</th>
+        <th>actions</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of posts" (click)="onSelect(post)" style="cursor: pointer;">
+
+            <td>{{post.texte}}</td>
+            <td>{{post.createAt | date}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="delete(post.id)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

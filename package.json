@@ -15,12 +15,15 @@
     "@angular/common": "~9.0.5",
     "@angular/compiler": "~9.0.5",
     "@angular/core": "~9.0.5",
+    "@angular/fire": "^6.1.4",
     "@angular/forms": "~9.0.5",
     "@angular/platform-browser": "~9.0.5",
     "@angular/platform-browser-dynamic": "~9.0.5",
     "@angular/router": "~9.0.5",
+    "firebase": "^8.1.2",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "uuid": "^8.3.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
